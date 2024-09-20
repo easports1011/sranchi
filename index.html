@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliophile</title>
+    <link rel="icon" href="magic-book.png" type="image/png">
+    <link rel="stylesheet" href="left.css">
+	<link rel="stylesheet" href="right.css">
+</head>
+<body>
+    <!-- Left Side -->
+    <div class="left">
+        <h3 class="fixed">Hey you, MBA EYwala</h3>
+        <div class="word">
+            <span>S</span>
+            <span>H</span>
+            <span>U</span>
+            <span>B</span>
+            <span>H</span>
+			<span>I</span>
+        </div>
+        <footer>
+            <p>Created with ❤️ for <a target="_blank" href="https://www.instagram.com/_northern._lights/">‣ ⬤━────♬</a></p>
+		</footer>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+        <div class="container">
+			<div class="book">
+				<div class="book__cover">
+					<a href="aurora.html" id="redirect-link"><img class="book__cover-img" src="desire.jpg"></a>
+				</div>
+				<div class="book__pages"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const spans = document.querySelectorAll('.word span');
+        spans.forEach((span, idx) => {
+            span.addEventListener('click', (e) => {
+                e.target.classList.add('active');
+            });
+            span.addEventListener('animationend', (e) => {
+                e.target.classList.remove('active');
+            });
+
+            // Initial animation
+            setTimeout(() => {
+                span.classList.add('active');
+            }, 750 * (idx + 1));
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const link = document.getElementById('redirect-link');
+            
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                setTimeout(function() {
+                    window.location.href = link.href; // Redirect after delay
+                }, 1000); // 1500 milliseconds delay
+            });
+        });
+    </script>
+</body>
+</html>

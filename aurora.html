@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aurora.css">
+    <link rel="stylesheet" href="ranchi.css">
+    <title>Into the Starry Night</title>
+    <link rel="icon" href="northern-lights.png" type="image/png">
+</head>
+<body>
+    <div class="scene"></div>
+    <div class="image-container">
+        <img class="ranchi" src="ranchi.png">
+    </div>
+
+    <!-- Popup container -->
+	<div id="overlay" class="overlay"></div> 
+	<div id="popup" class="popup">
+		<div id="popup-animation-container" class="popup-animation-container">
+			<span id="text1"></span>
+			<span id="text2"></span>
+		</div>
+
+		<svg id="filters">
+			<defs>
+				<filter id="threshold">
+					<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+													0 1 0 0 0
+													0 0 1 0 0
+													0 0 0 255 -140" />
+				</filter>
+			</defs>
+		</svg>
+	</div>
+
+    
+    <script src="aurora.js"></script>
+    <script src="popupcontent.js"></script>
+</body>
+</html>
