@@ -35,6 +35,8 @@ let cooldown = baseCooldownTime;
 // Event listeners for hold to pause functionality on the popup
 elts.popup.addEventListener('mousedown', pauseAnimation);
 document.addEventListener('mouseup', resumeAnimation);
+elts.popup.addEventListener('touchstart', pauseAnimation);
+document.addEventListener('touchend', resumeAnimation);
 
 function pauseAnimation() {
     isAnimating = false; // Stop the animation
