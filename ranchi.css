@@ -27,8 +27,8 @@
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     overflow: hidden;
     /*background: rgb(9,9,121);
     background: linear-gradient(90deg, rgba(9,9,121,1) 25%, rgba(2,0,36,1) 52%, rgba(235,0,255,1) 100%);
@@ -54,9 +54,9 @@
 
 #popup-animation-container {
     position: relative;
-    margin: auto;
+    margin: 5px;
     width: 100%;
-    height: 15pt;
+    height: 20pt;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -69,7 +69,7 @@
     width: 100%;
     display: inline-block;
     font-family: "Allura", cursive;;
-    font-size: 60pt;
+    font-size: 50pt;
     text-align: center;
     user-select: none;
 }
